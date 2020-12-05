@@ -48,5 +48,8 @@ class op(bpy.types.Operator):
 					modifiers.modifiers[self.modifier_index].process_objects(fileName, objects)
 
 					
-		bpy.context.scene.update()
+		#bpy.context.scene.update()
+		layer = bpy.context.view_layer
+		layer.update()
+
 		return {'FINISHED'}
